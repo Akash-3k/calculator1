@@ -10,6 +10,10 @@
         document.form.textview.value=eval(exp)
       }
     }
+    function sq(){
+      var a=document.form.textview.value;
+      document.form.textview.value=Math.sqrt(a);
+    }
       function clean(){
         document.form.textview.value="";
       }
@@ -33,17 +37,17 @@
       border-radius:50%;
       cursor:pointer;
       background-color: #607d8b;
-      border: none;
-      color: white;
-      text-shadow: 2px 2px black;
+      border: 2;
+      color: black;
+      text-shadow: 2px 2px grey;
       
       }
     .textview{
-      width:215;
+      width:263;
       margin:4;
       padding: 5;
       font-size:40;
-      border-radius:20px;
+      border-radius:10px;
 
 
 
@@ -56,7 +60,7 @@
 
       }
       .bg{
-        background: linear-gradient(to right,#e91e63,#3f51b5);
+        background: linear-gradient(to left,#f91e67,#3f51b5);
         height: 100%;
       }
       
@@ -74,6 +78,8 @@
          <td><input class="button" type="button" value="<" onclick="back()"></td>
          <td><input class="button" type="button"value="/" onclick="insert('/')"></td>
          <td><input class="button" type="button"value="x" onclick="insert('*')"></td>
+         <td><input class="button" type="button"value="^" onclick="sq()"></td>
+
        </tr>
        <tr>
          <td><input class="button" type="button"value="7" onclick="insert(7)"></td>
@@ -97,6 +103,7 @@
          <td colspan="2"><input class="button" style="width: 107" type="button"value="0"onclick="insert(0)"></td>
          <td colspan="2"><input class="button" type="button"value="." onclick="insert('.')"></td>
        </tr>
+
      </table>
    </div>
     
